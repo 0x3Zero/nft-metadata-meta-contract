@@ -7,9 +7,9 @@ pub struct DataStructFork {
     pub version: String,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct OpenSeaAttributes {
-  pub display_type: String,
-  pub trait_type: String,
-  pub value: i32,
+    pub display_type: Option<String>,
+    pub trait_type: String,
+    pub value: i32,
 }

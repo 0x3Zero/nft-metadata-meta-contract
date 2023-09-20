@@ -1,6 +1,8 @@
 use marine_rs_sdk::marine;
 use serde::Deserialize;
 
+use crate::data::OpenSeaAttributes;
+
 #[marine]
 pub struct MetaContractResult {
     pub result: bool,
@@ -64,5 +66,11 @@ pub struct MetaContract {
 
 #[derive(Debug, Default, Deserialize)]
 pub struct SerdeMetadata {
-  pub loose: i64,
+    pub loose: i64,
+}
+
+#[derive(Debug, Default, Deserialize)]
+pub struct NFTMetadataStandard {
+    pub name: String,
+    pub attributes: Vec<OpenSeaAttributes>,
 }
