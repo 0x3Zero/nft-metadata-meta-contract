@@ -79,3 +79,17 @@ pub fn on_mint(
         error_string: "on_mint is not available".to_string(),
     }
 }
+
+#[marine]
+pub fn post_mint(
+    metadatas: Vec<FinalMetadata>,
+    contract: MetaContract,
+    data_key: String,
+    token_id: String,
+) -> MetaContractResult {
+    MetaContractResult {
+        result: true,
+        metadatas: metadatas,
+        error_string: "".to_string(),
+    }
+}
