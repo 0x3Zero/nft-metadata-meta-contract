@@ -11,6 +11,7 @@ pub struct MetaContractResult {
 }
 
 #[marine]
+#[derive(Clone)]
 pub struct FinalMetadata {
     pub public_key: String,
     pub alias: String,
