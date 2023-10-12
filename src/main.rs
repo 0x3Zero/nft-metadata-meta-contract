@@ -143,7 +143,7 @@ pub fn on_post_mint(
 
     MetaContractResult {
         result: true,
-        metadatas: metadatas,
+        metadatas: new_metadatas,
         error_string: "".to_string(),
     }
 }
